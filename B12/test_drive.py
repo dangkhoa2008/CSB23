@@ -50,14 +50,13 @@ def test_drive():
             choose = 0
 
         # kiem tra tung hanh dong
-        match choose:
-            case 1:
+        if choose == 1:
                 # phat nhac
                 mp3.play_song()
-            case 2:
+        elif choose == 2:
                 # bo qua bai hat
                 mp3.skip_song()
-            case 3:
+        elif choose == 3:
                 # exit
                 print(
                     BLUE
@@ -66,7 +65,7 @@ def test_drive():
                 )
                 break
             
-            case _:
+        else:
                 print(RED + "Lỗi: Lựa chọn không hợp lệ!" + RESET)
 
 test_drive()
